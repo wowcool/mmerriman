@@ -1,0 +1,148 @@
+.portfolio {
+	@include clearfix();
+	padding: 2em;
+	@include transform(translate3d(.1em,-.3em,-2em));
+	width: auto;
+
+	@include animation(slideIn .6s ease-in-out forwards);
+
+	@include keyframes(slideIn) {
+	
+	0% {
+	    opacity: 0;
+	  }
+	30% {
+	    @include transform(translate3d(0,0,0));
+	    opacity: 0;
+	  }
+	100% {
+	    @include transform(translate3d(0,0,0));
+	    opacity: 1;
+	  }
+	}
+
+	@media screen and (min-width: $bp3) {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+
+}
+
+.project {
+	width: calc(100%);
+	// height: 9em;
+	margin: 0 0 .5em 0;
+	float: left;
+	cursor: pointer;
+	@include transition(background .3s ease-in);
+	background-color: rgba(0,0,0,.3);
+
+
+	@media screen and (min-width: $bp1) {
+		width: calc(100%/2);
+	}
+
+	@media screen and (min-width: $bp2) {
+		width: calc(100%/3);
+	}
+
+	@media screen and (min-width: $bp3) {
+		width: calc(100%/4);
+	}
+	
+
+	.project-wrapper {
+		
+		margin: .3em;
+
+		> div {
+			position: relative;
+			overflow: hidden;
+		}
+	}
+
+
+	&:hover,
+	&:active {
+		background-color: rgba(0,0,0,.9);
+
+		.thumbnail {
+			@include filter(grayscale(0));
+		}
+
+		.text, h1 {
+			opacity: 1;
+		}
+	}
+
+	.text, h1 {
+		opacity: .6;
+		@include transition(opacity .3s ease-in);
+		@include transform(translate3d(0,0,0));
+	}
+
+	.thumbnail {
+		width: 100%;
+		height: 6em;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include transition(opacity .3s ease-in);
+		@include filter(grayscale(1));
+	}
+
+	.label {
+		font-size: .6em;
+		font-weight: 200;
+		color: #666;	
+	}
+
+	.dp-info {
+		float: left;
+	}
+
+	.director-info {
+		float: left;
+		margin-right: 1.5em;
+	}
+
+	h1 {
+		
+		margin: 0;
+		font-weight: 600;
+		font-size: .6em;
+		padding: .2em .4em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: #ccc;
+		z-index: 140;
+		width: 100%;
+		background: rgba(0,0,0,.6);
+		text-transform: uppercase;
+	}
+
+	h2 {
+		margin: .2em 0;
+		font-weight: 100;
+		font-size: 1.2em;
+		text-indent: .2em; 
+	}
+
+	h3 {
+		margin: 0;
+		font-weight: 100;
+		font-size: .8em;
+	}
+
+	h4 {
+		font-size: .6em;
+		color: #666;
+		margin: 0;	
+		font-weight: 600;
+		float: right;
+	}
+
+
+
+}

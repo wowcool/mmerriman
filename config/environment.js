@@ -2,10 +2,20 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'micahel-merriman',
+    modulePrefix: 'michael-merriman',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    contentSecurityPolicy: {
+      'style-src': "'self' 'unsafe-inline'",
+      'default-src': "'self'",
+      'script-src': "'self' 'unsafe-inline'",
+      'font-src': "'self' data:",
+      'connect-src': "'self' *",
+      'img-src': "*",
+      'media-src': "'self'",
+      'frame-src': "'self' 'unsafe-inline' *.youtube.com *.vimeo.com"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -19,12 +29,14 @@ module.exports = function(environment) {
     }
   };
 
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
   }
 
   if (environment === 'test') {
@@ -40,7 +52,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = 'http://digital-mutation.com/clients/mmerriman/';
   }
 
   return ENV;

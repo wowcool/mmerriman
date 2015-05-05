@@ -1,0 +1,33 @@
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.nav-list {
+	display: block;
+	@include clearfix();
+	padding: 0;
+}
+
+.nav-item {
+	display: block;
+	margin: .25em;
+
+	&:first-child {
+		margin-left: 1em;
+		float: left;
+		position: relative;
+	}
+
+	&:last-child {
+		margin-right: 1em;
+		position: relative;
+		float: right;
+		top: -.1em;
+	}
+
+
+}

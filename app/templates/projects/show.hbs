@@ -1,0 +1,42 @@
+<div class="video-wrapper">
+	<span class="close">
+		{{#link-to 'projects'}}
+			{{fa-icon 'times' size="lg"}}
+		{{/link-to}}
+	</span>
+	<div class="video-player">
+		
+		{{#view 'projects/video' thisVideo=model.video_id videoType=model.video_type}}
+		{{/view}}
+	
+	
+	</div>
+	
+	<div class="meta">
+		<div class="meta-title">
+			
+			<h2>{{model.title}}</h2>
+		</div>
+		<div class="meta-brand">
+			<h2>{{model.brand}}</h2>
+		</div>
+		<div class="clearfix">
+		<div class="meta-director">
+			<span class="label">Director</span>
+			<h2>{{model.director}}</h2>
+		</div>
+		<div class="meta-dp">
+			<span class="label">Director of Photography</span>
+			<h2>{{model.dp}}</h2>
+		</div>
+		</div>
+		<div class="meta-type">
+			<h2>{{model.type}}</h2>
+		</div>
+
+	</div>
+
+</div>
+
+
+{{outlet}}

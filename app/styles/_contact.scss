@@ -1,0 +1,103 @@
+.contact {
+	text-align: center;
+	margin: 0 1em;
+
+	h2 {
+		margin: 2em 0 1em;
+		font-size: 2em;
+		font-weight: 100;
+		@include animation(title 1s);
+		@include animation-timing-function(cubic-bezier(0.77,0.74,0.13));
+		
+		@media screen and (min-width: $bp1) {
+			font-size: 2.6em;
+		}
+
+		@media screen and (min-width: $bp2) {
+			font-size: 3em;
+		}
+
+	}
+
+	h3 {
+		a {
+
+			background: rgba(255,255,255,0);
+			font-size: 1em;
+			font-weight: 100;
+			margin: 0 2%;
+			display: inline-block;
+			padding: .5em 1em;
+			border: solid 1px #ccc;
+			@include transition(background .3s ease-in-out);
+			@include animation(button .8s);
+			@include animation-timing-function(cubic-bezier(0.77,0.74,0.13));
+
+			@media screen and (min-width: $bp1) {
+				font-size: 1.4em;
+			}
+
+			@media screen and (min-width: $bp2) {
+				font-size: 1.6em;
+			}
+
+			&:hover {
+			background: #fff;
+			border: solid 1px #000;
+			color: #000;
+			
+			}
+
+		}
+
+		
+
+		
+	}
+
+	@include keyframes(title) {
+	  0% {
+	    opacity: 0;
+	    @include transform(translate3D(0, -.2em, 0));
+	  }
+
+	  30% {
+	    opacity: 0;
+	    @include transform(translate3D(0, -.2em, 0));
+	  }
+
+	  31% {
+	    opacity: 1;
+	    @include transform(translate3D(0, -.2em, 0));
+	  }
+
+	  100% {
+	  	opacity: 1;
+	    @include transform(translate3D(0, 0, 0));
+	  }
+	}
+
+	@include keyframes(button) {
+	  0% {
+	    opacity: 0;
+	    @include transform(scale(.9));
+	  }
+
+	  30% {
+	    opacity: 0;
+	    @include transform(scale(.9));
+	  }
+
+	  31% {
+	    opacity: 1;
+	    @include transform(scale(.8));
+	  }
+
+	  100% {
+	  	opacity: 1;
+	    @include transform(scale(1));
+	  }
+	}
+
+
+}

@@ -1,0 +1,37 @@
+<div class="pageup">
+	<span class="close">
+		{{#link-to 'home'}}
+			{{fa-icon 'times' size="lg"}}
+		{{/link-to}}
+	</span>
+	<div class="portfolio">
+		{{#each item in model}}
+			{{#link-to 'projects.show' item}}
+			<div class="project">
+				<div class="project-wrapper">
+					<div>
+						
+
+						{{#view 'projects/thumbnail' thisBgImg=item.img}}
+						{{/view}}
+
+						<h1>
+							{{item.brand}}
+						</h1>
+						<div class="text">								
+							<h2>
+								{{item.title}}
+							</h2>
+							
+								
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			{{/link-to}}
+		{{/each}}
+	</div>
+</div>
+
+{{outlet}}

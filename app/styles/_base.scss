@@ -1,0 +1,141 @@
+body {
+  background-color: #f2f2f3;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #FFF;
+  min-width: $bp1;
+}
+
+.clearfix {
+	@include clearfix();
+}
+
+a {
+	color: rgba(255,255,255,.8);
+	text-decoration: none;
+	@include transition(color .3s ease-in);
+
+	&:hover, 
+	&:active {
+		color: rgba(255,255,255,1);
+	}
+}
+
+#bgvid {
+	// background: url('../img/background.jpg') no-repeat;
+	background-size: cover;
+	position: fixed; 
+	right: 0; 
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto; 
+	z-index: -100;
+	@include filter(blur(20px));
+	@media screen and (max-device-width: 800px) {
+		display: none;
+	}
+}
+
+.overlay {
+	position: fixed;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	opacity: .5;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%, rgba(2,1,1,0.68) 77%, rgba(2,1,1,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.2)), color-stop(77%,rgba(2,1,1,0.68)), color-stop(100%,rgba(2,1,1,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(2,1,1,0.68) 77%,rgba(2,1,1,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(2,1,1,0.68) 77%,rgba(2,1,1,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(2,1,1,0.68) 77%,rgba(2,1,1,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(0,0,0,0.2) 0%,rgba(2,1,1,0.68) 77%,rgba(2,1,1,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#020101',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.identity {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	bottom:0;
+	left: 0;
+	overflow: hidden;
+	@include transition(opacity .3s ease-in-out);
+}
+.thin-line {
+	height: 100%;
+	position: absolute;
+	z-index: 20;
+	border-right: solid 1px #fff;
+	width: 1px;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	opacity: .7;
+	transform: rotate(15deg) scale(1.3);
+}
+
+#id {
+	background-image: url(../img/id.png);
+	background-repeat:  no-repeat;
+	position: absolute;
+	z-index: 10;
+	top:0;
+	bottom:0;
+	width: 100%;
+	
+	
+	background-size: contain;
+	background-position: center center; 
+
+	@include animation(fadeIn .8s ease-in);
+}
+
+@include keyframes(fadeIn) {
+  from {
+    @include transform(translate3d(0,0,0));
+    opacity: 0;
+  }
+  to {
+    @include transform(translate3d(0,0,0));
+    opacity: 1;
+  }
+}
+
+.pageup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.7);
+	z-index: 120;
+	overflow-y: auto;
+	@include animation(fadein .3s ease-in);
+	min-width: $bp1;
+  	overflow-x: hidden;
+}
+
+.close {
+	position: fixed;
+	top: 1em;
+	left: 1em;
+	z-index: 130;
+	opacity: 0;
+	@include animation(fadein .3s ease-in .3s forwards);
+}
+
+@include keyframes(fadein) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+  	opacity: 1;
+  }
+}

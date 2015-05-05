@@ -1,0 +1,52 @@
+{
+  "checksum": {
+    "previous": "3e6a0d617f7738dfd016aae11f076ce8d77445c22eed5f1c47577d0283c14995",
+    "current": "3e6a0d617f7738dfd016aae11f076ce8d77445c22eed5f1c47577d0283c14995"
+  },
+  "fonts": [
+    "/Users/setheredge/Sites/michael/michael-merriman/tmp/build_font-tmp_dest_dir-0xoc0dLn.tmp/assets/icons.ttf",
+    "/Users/setheredge/Sites/michael/michael-merriman/tmp/build_font-tmp_dest_dir-0xoc0dLn.tmp/assets/icons.svg",
+    "/Users/setheredge/Sites/michael/michael-merriman/tmp/build_font-tmp_dest_dir-0xoc0dLn.tmp/assets/icons.woff",
+    "/Users/setheredge/Sites/michael/michael-merriman/tmp/build_font-tmp_dest_dir-0xoc0dLn.tmp/assets/icons.eot"
+  ],
+  "glyphs": {
+    "close": {
+      "codepoint": 61696,
+      "source": "/Users/setheredge/Sites/michael/michael-merriman/app/styles/icons/close.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "base64": true,
+    "config": "fontcustom.yml",
+    "css": "app/styles",
+    "css_selector": ".i-{{glyph}}",
+    "debug": true,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "icons",
+    "fonts": "public/fonts",
+    "force": true,
+    "input": {
+      "templates": "/Users/setheredge/Sites/michael/michael-merriman/app/styles/icons",
+      "vectors": "/Users/setheredge/Sites/michael/michael-merriman/app/styles/icons"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "/Users/setheredge/Sites/michael/michael-merriman/tmp/build_font-tmp_dest_dir-0xoc0dLn.tmp/assets",
+      "fonts": "/Users/setheredge/Sites/michael/michael-merriman/tmp/build_font-tmp_dest_dir-0xoc0dLn.tmp/assets",
+      "preview": "/Users/setheredge/Sites/michael/michael-merriman/tmp/build_font-tmp_dest_dir-0xoc0dLn.tmp/assets"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "../../../node_modules/ember-cli-fontcustom/addon/icons.css"
+    ],
+    "vectors": "app/styles/icons"
+  },
+  "templates": [
+    "/Users/setheredge/Sites/michael/michael-merriman/tmp/build_font-tmp_dest_dir-0xoc0dLn.tmp/assets/icons.css"
+  ]
+}

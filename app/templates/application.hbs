@@ -1,3 +1,26 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<nav class="nav">
+	<ul class="nav-list">
+		<li class="nav-item">
+			{{#link-to 'projects'}}
+				{{fa-icon 'th-large' size="lg"}}
+			{{/link-to}}
+		</li>
+		<li class="nav-item">
+			{{#link-to 'contact'}}
+				{{fa-icon 'envelope-o' size="lg"}}
+			{{/link-to}}
+		</li>
+	</ul>
+</nav>
+
+<video autoplay loop id="bgvid" muted>
+    <source src="video/background.webm" type="video/webm">
+    <source src="video/background.ogv" type="video/ogv">
+    <source src="video/background.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+
 
 {{outlet}}
