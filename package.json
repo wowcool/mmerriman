@@ -8,10 +8,9 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ember server",
+    "start": "bower install; npm install; ember server",
     "build": "ember build",
-    "test": "ember test", 
-    "postinstall": "bower install; npm install; ember server"
+    "test": "ember test"
   },
   "repository": "https://github.com/setheredge1105/mmerriman.git",
   "engines": {
